@@ -10,16 +10,17 @@ import { Button } from './button';
 
 //import { useActionState } from 'react';
 import { useFormState } from 'react-dom';
-import { authenticate } from '@/app/lib/actions';
+//import { authenticate } from '@/app/lib/actions';
 
 export default function LoginForm() {
-  const [errorMessage, formAction, isPending] = /* useActionState */useFormState(
+  /* const [errorMessage, formAction, isPending] = useFormState(
     authenticate,
     undefined,
-  );
+  ); */
 
   return (
-    <form action={formAction} className="space-y-3">
+    <form className="space-y-3">
+      {/* action={formAction}  */}
       <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
         <h1 className={`mb-3 text-2xl`}>
           Please log in to continue.
@@ -65,10 +66,11 @@ export default function LoginForm() {
             </div>
           </div>
         </div>
-        <Button className="mt-4 w-full" aria-disabled={isPending}>
+        <Button className="mt-4 w-full">
+          {/*  aria-disabled={isPending} */}
           Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
         </Button>
-        <div
+        {/* <div
           className="flex h-8 items-end space-x-1"
           aria-live="polite"
           aria-atomic="true"
@@ -79,7 +81,7 @@ export default function LoginForm() {
               <p className="text-sm text-red-500">{errorMessage}</p>
             </>
           )}
-        </div>
+        </div> */}
       </div>
     </form>
   );
